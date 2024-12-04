@@ -1,0 +1,6 @@
+transformers==4.36.2
+vllm==0.2.6
+sqlglot==20.4.0
+nltk==3.8.1
+sqlparse==0.4.4
+func-timeout==4.3.5
