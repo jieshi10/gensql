@@ -1,5 +1,7 @@
 # Gen-SQL: Efficient Text-to-SQL By Bridging Natural Language Question And Database Schema With Pseudo-Schema
 
+[\[Paper\]](https://aclanthology.org/2025.coling-main.256/)
+
 ## Prerequisite
 
 ### Environment
@@ -81,3 +83,33 @@ Put the retriever model in [pretrained](pretrained).
     ```shell
     . bird_code/evaluation/run_evaluation.sh
     ```
+
+## Citation
+
+```
+@inproceedings{shi-etal-2025-gen,
+    title = "Gen-{SQL}: Efficient Text-to-{SQL} By Bridging Natural Language Question And Database Schema With Pseudo-Schema",
+    author = "Shi, Jie  and
+      Xu, Bo  and
+      Liang, Jiaqing  and
+      Xiao, Yanghua  and
+      Chen, Jia  and
+      Xie, Chenhao  and
+      Wang, Peng  and
+      Wang, Wei",
+    editor = "Rambow, Owen  and
+      Wanner, Leo  and
+      Apidianaki, Marianna  and
+      Al-Khalifa, Hend  and
+      Eugenio, Barbara Di  and
+      Schockaert, Steven",
+    booktitle = "Proceedings of the 31st International Conference on Computational Linguistics",
+    month = jan,
+    year = "2025",
+    address = "Abu Dhabi, UAE",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.coling-main.256/",
+    pages = "3794--3807",
+    abstract = "With the prevalence of Large Language Models (LLMs), recent studies have shifted paradigms and leveraged LLMs to tackle the challenging task of Text-to-SQL. Because of the complexity of real world databases, previous works adopt the retrieve-then-generate framework to retrieve relevant database schema and then to generate the SQL query. However, efficient embedding-based retriever suffers from lower retrieval accuracy, and more accurate LLM-based retriever is far more expensive to use, which hinders their applicability for broader applications. To overcome this issue, this paper proposes Gen-SQL, a novel generate-ground-regenerate framework, where we exploit prior knowledge from the LLM to enhance embedding-based retriever and reduce cost. Experiments on several datasets are conducted to demonstrate the effectiveness and scalability of our proposed method. We release our code and data at https://github.com/jieshi10/gensql."
+}
+```
