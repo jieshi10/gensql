@@ -735,7 +735,19 @@ def add_usage_inplace(a: dict, b: Optional[dict]):
     if b is None:
         return
     for k in a:
-        a[k] += b[k]
+        if k in b:
+            if isinstance(a[k], dict):
+                add_usage_inplace(a[k], b[k])
+            else:
+                if a[k] is None:
+                    a[k] = b[k]
+                elif b[k] is None:
+                    pass
+                else:
+                    a[k] += b[k]
+    for k in b:
+        if k not in a:
+            a[k] = b[k]
 
 
 def process_record_full_db(client: LLMClient, retriever: Retriever, r: dict, mode: str):
